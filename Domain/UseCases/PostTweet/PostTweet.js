@@ -1,5 +1,5 @@
 const dependencies = {
-  TwitterClient: require('Infra/clients/twitter')
+  TwitterClient: require('../../../Infra/clients/twitter')
 }
 
 module.exports = function PostTweet ({ message }, injection) {

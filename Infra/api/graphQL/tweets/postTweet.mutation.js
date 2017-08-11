@@ -1,7 +1,7 @@
 const { GraphQLString, GraphQLInt } = require('graphql')
 
 const dependencies = {
-  postTweet: require('Domain/UseCases/PostTweet')
+  postTweet: require('../../../../Domain/UseCases/PostTweet')
 }
 
 module.exports = {

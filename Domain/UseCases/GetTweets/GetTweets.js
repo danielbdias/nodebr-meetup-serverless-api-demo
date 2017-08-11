@@ -1,8 +1,8 @@
 const dependencies = {
-  TwitterClient: require('Infra/clients/twitter')
+  TwitterClient: require('../../../Infra/clients/twitter')
 }
 
-const Tweet = require('Domain/Entities/Tweet')
+const Tweet = require('../../Entities/Tweet')
 
 const processTweets = (tweets, injection) => {
   return Promise.all(

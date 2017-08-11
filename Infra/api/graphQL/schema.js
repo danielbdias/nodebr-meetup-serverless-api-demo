@@ -34,6 +34,4 @@ if (mutations && Object.keys(mutations).length > 0) {
   })
 }
 
-const root = new GraphQLSchema(schemaObject)
-
-module.exports = { root }
+module.exports = new GraphQLSchema(schemaObject)

@@ -2,7 +2,7 @@ const { GraphQLList, GraphQLString, GraphQLInt } = require('graphql')
 const TweetType = require('./types/tweet.type')
 
 const dependencies = {
-  GetTweets: require('Domain/UseCases/GetTweets')
+  GetTweets: require('../../../../Domain/UseCases/GetTweets')
 }
 
 module.exports = {

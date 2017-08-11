@@ -8,11 +8,14 @@ functions:
   graphql:
     handler: lambda.graphql
     environment:
-      TWITTER_CONSUMER_KEY: some_value
-      TWITTER_CONSUMER_SECRET: some_value
-      TWITTER_ACCESS_TOKEN: some_value
-      TWITTER_ACCESS_TOKEN_SECRET: some_value
+      TWITTER_CONSUMER_KEY: some-value
+      TWITTER_CONSUMER_SECRET: some-value
+      TWITTER_ACCESS_TOKEN: some-value
+      TWITTER_ACCESS_TOKEN_SECRET: some-value
     events:
+     - http:
+        path: graphql
+        method: post
      - http:
         path: graphql
         method: get
@@ -20,8 +23,8 @@ functions:
   graphiql:
     handler: lambda.graphiql
     environment:
-      GRAPHQL_URL: someurl.com
+      GRAPHQL_URL: some-url
     events:
      - http:
-        path: graphql
+        path: graphiql
         method: get

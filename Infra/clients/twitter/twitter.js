@@ -1,5 +1,5 @@
 const dependencies = {
-  config: require('Infra/config/twitter'),
+  config: require('../../config/twitter'),
   Twitter: require('twitter-node-client').Twitter
 }
 
