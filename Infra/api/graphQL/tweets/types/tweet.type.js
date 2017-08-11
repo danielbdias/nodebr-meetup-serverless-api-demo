@@ -2,23 +2,19 @@ const { GraphQLString, GraphQLObjectType } = require('graphql')
 
 const Tweet = new GraphQLObjectType({
   name: 'Tweet',
-  description: 'A single tweet',
+  description: 'Represent the relevant data of a single tweet used in this Domain.',
   fields: {
     text: {
       type: GraphQLString,
-      description: 'Tweet text'
-    },
-    sentiment: {
-      type: GraphQLString,
-      description: 'The sentiment detected in the tweet'
+      description: 'Text of the tweet'
     },
     author: {
       type: GraphQLString,
-      description: 'Author name'
+      description: 'Name of the author name'
     },
     published: {
       type: GraphQLString,
-      description: 'Tweet published date'
+      description: 'Date where the tweet was published'
     }
   }
 })

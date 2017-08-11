@@ -25,10 +25,15 @@ const searchTweets = (queryString, maxTweets, injection) => {
   return new Promise((resolve, reject) =>
     client.getSearch(
       { q: queryString, count: maxTweets },
-      (err, response, body) => reject(new Error('Error calling Twitter API: ' + { err, response, body })),
+      (err, response, body) => reject(handleTwitterApiError(err, response, body)),
       data => resolve(parseTweets(data))
     )
   )
+}
+
+const handleTwitterApiError = (err, response, body) => {
+  console.log({ err })
+  return new Error('Error calling Twitter API.')
 }
 
 const getTweetsByHashtag =
@@ -45,7 +50,7 @@ const postTweet = (message, injection) => {
   return new Promise((resolve, reject) =>
     client.postTweet(
       { status: message },
-      (err, response, body) => reject(new Error('Error calling Twitter API: ' + { err, response, body })),
+      (err, response, body) => reject(handleTwitterApiError(err, response, body)),
       data => resolve(data.id)
     )
   )

@@ -23,6 +23,7 @@ const schemaObject = {}
 if (queries && Object.keys(queries).length > 0) {
   schemaObject.query = new GraphQLObjectType({
     name: 'Query',
+    description: 'Set of queries used to retrieve Twitter data',
     fields: () => (queries)
   })
 }
@@ -30,6 +31,7 @@ if (queries && Object.keys(queries).length > 0) {
 if (mutations && Object.keys(mutations).length > 0) {
   schemaObject.mutation = new GraphQLObjectType({
     name: 'Mutation',
+    description: 'Set of operations that will change Twitter data',
     fields: () => (mutations)
   })
 }

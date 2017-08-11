@@ -13,6 +13,7 @@
     "deploy:service": "serverless deploy",
     "debug:graphql": "SLS_DEBUG=* serverless invoke local --function graphql --path graphql-event.json",
     "debug:graphiql": "SLS_DEBUG=* serverless invoke local --function graphiql",
+    "debug:searchTweetByHashtag": "SLS_DEBUG=* serverless invoke local --function searchTweetByHashtag --path searchTweetByHashtag-event.json",
     "test": "NODE_ENV=test NODE_PATH=./ mocha \"Domain/**/*.test.js\" \"Infra/**/*.test.js\" --colors --require Tests/support.js --reporter spec",
     "test:watch": "yarn test -- --watch",
     "coverage": "nyc yarn test",
