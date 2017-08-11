@@ -5,6 +5,5 @@ This code will show how to build an API using GraphQL and a serverless structure
 As a model to create the API that get tweets from Twitter by @handles and #hashtags, and post a tweet using the app handle.
 
 To run this code you will need to have:
-- Node.js 8.1.4
+- Node.js 6.10.2
 - Yarn package manager
-- Docker (with docker-compose installed)
