@@ -52,5 +52,7 @@ const postTweet = (message, injection) => {
 }
 
 module.exports = {
-  getTweetsByHashtag
+  getTweetsByHashtag,
+  getTweetsByHandle,
+  postTweet
 }

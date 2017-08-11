@@ -1,7 +1,7 @@
 const tweets = require('./tweets.query')
-const retrieveTweets = require('./retrieveTweets.mutation')
+const postTweet = require('./postTweet.mutation')
 
 module.exports = {
   queries: { tweets },
-  mutations: { retrieveTweets }
+  mutations: { postTweet }
 }

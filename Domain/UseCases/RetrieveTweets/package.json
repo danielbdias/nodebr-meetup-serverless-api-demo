@@ -1,6 +1,0 @@
-{
-  "name": "RetrieveTweets",
-  "private": true,
-  "description": "Retrieve tweets given a hashtag",
-  "main": "./RetrieveTweets.js"
-}

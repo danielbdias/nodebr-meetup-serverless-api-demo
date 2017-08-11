@@ -5,5 +5,8 @@ provider:
   runtime: nodejs6.10
 
 functions:
-  lambda-example:
-    handler: lambda.handler
+  graphql:
+    handler: lambda.graphql
+
+  graphiql:
+    handler: lambda.graphiql

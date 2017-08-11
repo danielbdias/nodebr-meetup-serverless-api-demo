@@ -1,0 +1,6 @@
+{
+  "name": "PostTweet",
+  "private": true,
+  "description": "Post a tweet using the app",
+  "main": "./PostTweet.js"
+}
