@@ -1,5 +1,4 @@
 const { graphiqlLambda } = require('graphql-server-lambda')
+const config = require('Infra/config/graphql')
 
-module.exports = function graphiQLLambda (endpointURL) {
-  return graphiqlLambda({ endpointURL })
-}
+module.exports = graphiqlLambda({ endpointURL: config.url })

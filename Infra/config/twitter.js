@@ -1,8 +1,8 @@
 const localConfig = {
-  consumerKey: 'my-consumer-key',
-  consumerSecret: 'my-consumer-secret',
-  accessToken: 'my-access-token',
-  accessTokenSecret: 'my-access-token-secret'
+  consumerKey: process.env.TWITTER_CONSUMER_KEY || 'my-consumer-key',
+  consumerSecret: process.env.TWITTER_CONSUMER_SECRET || 'my-consumer-secret',
+  accessToken: process.env.TWITTER_ACCESS_TOKEN || 'my-access-token',
+  accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET || 'my-access-token-secret'
 }
 
 const remoteConfig = {

@@ -1,4 +1,4 @@
-service: lambda-example
+service: nodebr-meetup-serverless-api-demo
 
 provider:
   name: aws
@@ -7,6 +7,21 @@ provider:
 functions:
   graphql:
     handler: lambda.graphql
+    environment:
+      TWITTER_CONSUMER_KEY: some_value
+      TWITTER_CONSUMER_SECRET: some_value
+      TWITTER_ACCESS_TOKEN: some_value
+      TWITTER_ACCESS_TOKEN_SECRET: some_value
+    events:
+     - http:
+        path: graphql
+        method: get
 
   graphiql:
     handler: lambda.graphiql
+    environment:
+      GRAPHQL_URL: someurl.com
+    events:
+     - http:
+        path: graphql
+        method: get

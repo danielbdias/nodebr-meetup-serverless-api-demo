@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "serverless package",
+    "deploy": "serverless deploy",
     "test": "NODE_ENV=test NODE_PATH=./ mocha \"Domain/**/*.test.js\" \"Infra/**/*.test.js\" --colors --require Tests/support.js --reporter spec",
     "test:watch": "yarn test -- --watch",
     "coverage": "nyc yarn test",
